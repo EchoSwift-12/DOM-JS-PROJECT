@@ -76,3 +76,15 @@ console.log('after asyncfn call') //5
 
 // *****************************************
 
+
+const getinData = async () => {
+   
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1')
+    const data = await response.json()
+    //parsing the JSON body text as JavaScript objects
+    console.log(data) 
+    const {title, body} = data
+    console.log(title, body)
+}
+getinData()
+
